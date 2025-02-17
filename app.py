@@ -2,6 +2,9 @@ import streamlit as st  #/Library/Frameworks/Python.framework/Versions/3.13/bin/
 import functions
 
 todos = functions.get_todos()
+
+st.set_page_config(layout='wide')
+
 def add_todo():
     todo = st.session_state['new_todo']
     todos.append(todo.capitalize() + '\n')
